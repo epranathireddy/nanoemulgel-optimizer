@@ -1,0 +1,21 @@
+# Environment and Secret Files
+.env
+.env.*
+*.token
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data and SQLite
+*.db-journal
+
+# Reports and exports
+reports/*.pdf
+exports/*.xlsx
+exports/*.csv
+
+# Streamlit run cache
+.streamlit/
