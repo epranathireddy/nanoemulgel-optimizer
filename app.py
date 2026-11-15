@@ -84,12 +84,18 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+from pathlib import Path
+
 # Initialize Session State
 if "current_project_id" not in st.session_state:
     st.session_state["current_project_id"] = None
 
 # Sidebar Navigation
-st.sidebar.image("https://img.icons8.com/fluency/96/chemistry.png", width=64)
+logo_path = Path(__file__).resolve().parent / "assets" / "logo.png"
+if logo_path.exists():
+    st.sidebar.image(str(logo_path), width=72)
+else:
+    st.sidebar.markdown("# 🧪")
 st.sidebar.markdown(f"### **PharmaQbD v{APP_VERSION}**")
 st.sidebar.markdown("*Nanoemulgel Optimization Platform*")
 
